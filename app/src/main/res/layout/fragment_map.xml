@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UpdateFragment">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/rectangle_bg"
+        android:id="@+id/searchLayout">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/searchImg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_search"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar"
+            android:textSize="16sp"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_toRightOf="@id/searchImg"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:hint="Search"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible">
+
+        <!--    <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@drawable/ic_copy"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_title="Label on the right"
+                app:fab_addButtonSize="mini"
+                app:fab_colorPressed="@color/colorPurple_900"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@drawable/ic_my_location"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_title="Label on the right"
+                app:fab_addButtonSize="mini"
+
+                app:fab_colorPressed="@color/colorPurple_900"/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/actionBarItemBackground"
+                android:id="@+id/copyLoc"
+                android:background="@drawable/rectangle_gradient_bg"
+                android:src="@drawable/ic_copy"/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/actionBarItemBackground"
+                android:id="@+id/myLoc"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangle_gradient_bg"
+                android:src="@drawable/ic_my_location"/> -->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/copyFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:scaleType="center"
+            android:backgroundTint="@color/colorAccent"
+            android:tint="@color/Gray"
+            android:src="@drawable/ic_copy"
+            android:focusable="true"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/myLocFac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:scaleType="center"
+            android:backgroundTint="@color/colorAccent"
+            android:tint="@color/colorPurple_A400"
+            android:src="@drawable/ic_my_location"
+            android:focusable="true"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/actionBarItemBackground"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_gradient_bg"
+        android:text="@string/find_nearest_bin"
+        android:visibility="gone"
+        android:id="@+id/findBin"
+        android:textColor="@color/colorAccent" />
+
+
+
+
+</RelativeLayout>

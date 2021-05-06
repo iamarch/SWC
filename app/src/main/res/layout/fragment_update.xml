@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UpdateFragment">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/reportLayout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:textSize="14sp"
+            android:elevation="2dp"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:maxLines="5"
+            android:layout_toStartOf="@+id/addLoc"
+            android:background="@drawable/rectangle_bg"
+            android:layout_centerVertical="true"
+            android:hint="Report issue..."/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:padding="5dp"
+            android:foreground="?attr/actionBarItemBackground"
+            android:id="@+id/addLoc"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rectangle_gradient_bg"
+            android:src="@drawable/ic_location"
+            android:layout_toStartOf="@+id/addImage"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:padding="5dp"
+            android:foreground="?attr/actionBarItemBackground"
+            android:id="@+id/addImage"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rectangle_gradient_bg"
+            android:src="@drawable/ic_add_image"
+            android:layout_toStartOf="@+id/sendBtn"/>
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:id="@+id/sendBtn"
+            android:foreground="?attr/actionBarItemBackground"
+            android:background="@drawable/rectangle_gradient_bg"
+            android:src="@drawable/ic_send"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emptyReports"
+        android:textSize="12sp"
+        android:text="No recent reports"
+        android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/reportLayout"
+        android:id="@+id/recyclerView"
+        android:visibility="visible"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="All your reports will show here."
+
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:layout_margin="10dp"/>
+
+
+
+</RelativeLayout>

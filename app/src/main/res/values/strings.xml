@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SWC</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="appName">SMART WASTE COLLECTOR</string>
+    <string name="log_out">Log out</string>
+    <string name="find_nearest_bin">Find nearest bin</string>
+</resources>
